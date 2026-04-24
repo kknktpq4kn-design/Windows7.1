@@ -1,20 +1,25 @@
 import { Outlet } from "react-router-dom";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+
+// Se i file esistono, togli i // qui sotto e controlla le maiuscole!
+// import Header from "./Header.jsx";
+// import Footer from "./Footer.jsx";
 
 const SiteLayout = () => {
   return (
-    <div className="min-h-screen flex flex-column bg-black text-white selection:bg-blue-500/30">
-      {/* Background Effect Aero Glass */}
-      <div className="fixed inset-0 bg-[url('/bg-aero.jpg')] bg-cover bg-center opacity-40 -z-10" />
-      
-      <Header />
-      
-      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+    <div className="min-h-screen flex flex-col bg-slate-950 text-white">
+      {/* HEADER TEMPORANEO (Se l'altro fallisce) */}
+      <header className="p-4 border-b border-white/10 bg-black/20 backdrop-blur-md">
+        <h1 className="text-xl font-bold">AeroWorld Resurrection</h1>
+      </header>
+
+      <main className="flex-1">
         <Outlet />
       </main>
 
-      <Footer />
+      {/* FOOTER TEMPORANEO */}
+      <footer className="p-4 border-t border-white/10 text-center text-sm opacity-50">
+        © 2026 Elon Stek - Resurrection Project
+      </footer>
     </div>
   );
 };
