@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Segoe+UI:wght@300;400;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 207 45% 95%;
+    --foreground: 210 10% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 10% 15%;
+    --primary: 207 90% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 207 30% 90%;
+    --secondary-foreground: 210 10% 15%;
+    --muted: 207 20% 92%;
+    --muted-foreground: 210 10% 40%;
+    --accent: 45 100% 50%;
+    --accent-foreground: 210 10% 15%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 207 30% 85%;
+    --input: 207 30% 85%;
+    --ring: 207 90% 40%;
+    --radius: 0px;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+}
+
+@layer base {
+  * { @apply border-border outline-ring/50; }
+  body { @apply bg-background text-foreground; }
+}
