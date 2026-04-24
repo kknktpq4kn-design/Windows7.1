@@ -1,15 +1,22 @@
-import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "@/Header.jsx";
-import Footer from "@/Footer.jsx";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 
-export default function SiteLayout() {
+const SiteLayout = () => {
   return (
-    <div className="min-h-screen flex flex-col font-main"
-      style={{ background: "linear-gradient(180deg, #c8dff0 0%, #dde9f3 30%, #e8f0f6 60%, #c8dff0 100%)" }}>
+    <div className="min-h-screen flex flex-column bg-black text-white selection:bg-blue-500/30">
+      {/* Background Effect Aero Glass */}
+      <div className="fixed inset-0 bg-[url('/bg-aero.jpg')] bg-cover bg-center opacity-40 -z-10" />
+      
       <Header />
-      <div className="flex-1"><Outlet /></div>
+      
+      <main className="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <Outlet />
+      </main>
+
       <Footer />
     </div>
   );
-}
+};
+
+export default SiteLayout;
