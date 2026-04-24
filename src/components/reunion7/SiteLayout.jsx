@@ -1,8 +1,8 @@
 import { Outlet } from "react-router-dom";
 
 // Se i file esistono, togli i // qui sotto e controlla le maiuscole!
-// import Header from "./Header.jsx";
-// import Footer from "./Footer.jsx";
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 
 const SiteLayout = () => {
   return (
